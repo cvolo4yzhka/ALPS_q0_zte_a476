@@ -3471,7 +3471,7 @@ update3AExif(CamExif *pCamExif)
     MBOOL ret = MTRUE;
 
     //MY_DBG("+ (u4CamMode) = (%d)", u4CamMode);
-#if 0
+
     CamExifParam rExifParam;
     CamDbgParam rDbgParam;
 
@@ -3499,7 +3499,7 @@ update3AExif(CamExif *pCamExif)
     p3AHal->set3AEXIFInfo(pCamExif);
     p3AHal->setDebugInfo(pCamExif);
     p3AHal->destroyInstance();
-#endif
+
     FUNCTION_LOG_END;
     return ret;
 }

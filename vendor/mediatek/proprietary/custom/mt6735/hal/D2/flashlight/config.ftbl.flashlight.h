@@ -56,6 +56,15 @@ FTABLE_SCENE_INDEP()
     if  (1 == facing)
     {
         MY_LOGD("facing=yes");
+	    FTABLE_CONFIG_AS_TYPE_OF_DEFAULT_VALUES(
+	        KEY_AS_(MtkCameraParameters::KEY_FLASH_MODE),
+	        SCENE_AS_DEFAULT_SCENE(
+	            ITEM_AS_DEFAULT_(MtkCameraParameters::FLASH_MODE_OFF),
+	            ITEM_AS_VALUES_(
+	            CameraParameters::FLASH_MODE_OFF,
+	            )
+	        ),
+	    )
         return  true;
     }
 #endif
