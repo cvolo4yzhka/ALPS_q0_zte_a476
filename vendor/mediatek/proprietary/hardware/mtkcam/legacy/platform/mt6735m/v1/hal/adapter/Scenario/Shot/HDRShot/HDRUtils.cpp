@@ -1532,6 +1532,8 @@ requestBlurredWeightMapBuf(void)
     MY_VERB("[requestBlurredWeightMapBuf] u4Size: %d. u4AlignedSize: %d. u4TableSize: %d. u4AlignedTableSize: %d.", u4Size, u4AlignedSize, u4TableSize, u4AlignedTableSize);
 
     BlurredWeight = (HDR_PIPE_WEIGHT_TBL_INFO**)memalign(L1_CACHE_BYTES, u4AlignedSize);
+    if (CC_UNLIKELY(!BlurredWeight))
+           CAM_LOGD("Warning BlurredWeight is NULL\n");
 
     for (MUINT32 i = 0; i < mu4OutputFrameNum; i++)
     {
