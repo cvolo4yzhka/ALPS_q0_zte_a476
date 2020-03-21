@@ -126,10 +126,3 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_COPY_FILES += \
 	$(call find-copy-subdir-files,*,$(LOCAL_PATH)/system,system)
 
-# GMS_nik-kst interface
-ifdef BUILD_GMS_nik-kst
-ifeq ($(strip $(BUILD_GMS_nik-kst)), yes)
-$(call inherit-product-if-exists, vendor/google/gms.mk)
-
-endif
-endif
