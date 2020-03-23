@@ -33,7 +33,7 @@
 #
 # *************************************************************************
 
-# Generated at 2020-03-09 14:50:26
+# Generated at 2020-03-23 10:59:52
 
 # ------------------------------ Modem specification
 MODEM_SPEC = MTK_MODEM_LWG
@@ -367,7 +367,7 @@ UMTS_RF_MODULE = MT6735_UMTS_FDD_MT6169_CUSTOM
   #   Non-switchable
 
 # ------------------------------ Verno information
-VERNO = MOLY.LR9.W1444.MD.LWTG.MP.V289.4
+VERNO = MOLY.LR9.W1444.MD.LWTG.MP.V291
 BUILD = BUILD_NO
 BRANCH = LR9.W1444.MD.LWTG.MP
 # ------------------------------ System configurations
@@ -441,7 +441,7 @@ PROJECT_MAKEFILE_EXT = BIRD_Q0MP1_K37MV1_BSP(LWG_DSDS_COTSX)_EXT
 #
 # *************************************************************************
 
-# Generated at 2020-03-09 14:50:26
+# Generated at 2020-03-23 10:59:52
 
 CHK_ENV_FLAG = TRUE
   # Description:
@@ -2521,7 +2521,7 @@ OPTR_SPEC_MODEM = NONE
   # Switch-ability:
   #   Non-switchable
 
-ORIGINAL_VERNO = MOLY.LR9.W1444.MD.LWTG.MP.V289.4
+ORIGINAL_VERNO = MOLY.LR9.W1444.MD.LWTG.MP.V291
 
 OS_TICK_PERIOD_IN_US = 5000
   # Description:
