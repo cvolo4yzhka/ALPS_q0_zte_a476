@@ -277,7 +277,6 @@ extern LCM_DRIVER nt35523_wxga_dsi_vdo_8163_lcm_drv;
 extern LCM_DRIVER nt35523_wsvga_dsi_vdo_boe_lcm_drv;
 extern LCM_DRIVER s6e3fa2_fhd1080_dsi_vdo_lcm_drv;
 extern LCM_DRIVER ek79023_dsi_wsvga_vdo_lcm_drv;
-extern LCM_DRIVER nt35532_fhd_dsi_vdo_sharp_lcm_drv;
 extern LCM_DRIVER s6d7aa0_wxga_dsi_vdo_lcm_drv;
 extern LCM_DRIVER hx8394c_wxga_dsi_vdo_lcm_drv;
 extern LCM_DRIVER it6151_lp079qx1_edp_dsi_video_8163evb_lcm_drv;
@@ -368,6 +367,8 @@ extern LCM_DRIVER ili9881c_hd_dsi_vdo_ilitek_nt50358_3lane_lcm_drv;
 extern LCM_DRIVER ili9881c_hd_dsi_vdo_ilitek_nt50358_3lane_hdp1600_lcm_drv;
 extern LCM_DRIVER jd9365_hd720_dsi_lcm_drv;
 extern LCM_DRIVER otm1901a_fhd_dsi_vdo_tpv_lcm_drv;
+extern LCM_DRIVER r63350a_fhd_dsi_vdo_truly_lcm_drv;
+extern LCM_DRIVER nt35532_fhd_dsi_vdo_sharp_lcm_drv;
 extern LCM_DRIVER es6311_anx6585_zigzag_wxga_lcm_drv;
 extern LCM_DRIVER ili9881h_hdp_dsi_vdo_ilitek_rt5081_19_9_lcm_drv;
 extern LCM_DRIVER nt36672ah_hdp_dsi_vdo_tcl_csot_lcm_drv;
@@ -1334,10 +1335,6 @@ LCM_DRIVER *lcm_driver_list[] = {
 	&ek79023_dsi_wsvga_vdo_lcm_drv,
 #endif
 
-#if defined(NT35532_FHD_DSI_VDO_SHARP)
-	&nt35532_fhd_dsi_vdo_sharp_lcm_drv,
-#endif
-
 #if defined(OTM9605A_QHD_DSI_VDO)
 	&otm9605a_qhd_dsi_vdo_drv,
 #endif
@@ -1661,6 +1658,14 @@ LCM_DRIVER *lcm_driver_list[] = {
 
 #if defined(OTM1901A_FHD_DSI_VDO_TPV)
 	&otm1901a_fhd_dsi_vdo_tpv_lcm_drv,
+#endif
+
+#if defined(R63350A_FHD_DSI_VDO_TRULY)
+	&r63350a_fhd_dsi_vdo_truly_lcm_drv,
+#endif
+
+#if defined(NT35532_FHD_DSI_VDO_SHARP)
+	&nt35532_fhd_dsi_vdo_sharp_lcm_drv,
 #endif
 
 #if defined(ES6311_ANX6585_ZIGZAG_WXGA)

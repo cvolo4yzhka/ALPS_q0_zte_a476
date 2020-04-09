@@ -234,6 +234,6 @@ MUINT32 u4ISOWorkaroundValue;
         rOutput.u4SESensorGain = u4ISOWorkaroundValue;
         rOutput.u4LESensorGain = rOutput.u4SESensorGain;        
         rOutput.u4LEISPGain = rOutput.u4SEISPGain;      
-    } 
+    }
 }
 

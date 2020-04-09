@@ -114,7 +114,7 @@ char const*const GREEN_DELAY_OFF_FILE
         = "/sys/class/leds/green/delay_off";
 
 /* BLUE LED */
-/*char const*const BLUE_LED_FILE
+char const*const BLUE_LED_FILE
         = "/sys/class/leds/blue/brightness";
 
 char const*const BLUE_TRIGGER_FILE
@@ -125,7 +125,7 @@ char const*const BLUE_DELAY_ON_FILE
 
 char const*const BLUE_DELAY_OFF_FILE
         = "/sys/class/leds/blue/delay_off";
-*/
+
 /* LCD BACKLIGHT */
 char const*const LCD_FILE
         = "/sys/class/leds/lcd-backlight/brightness";
@@ -301,7 +301,7 @@ blink_green(int level, int onMS, int offMS)
 
 	return 0;
 }
-/*
+
 static int
 blink_blue(int level, int onMS, int offMS)
 {
@@ -345,7 +345,7 @@ blink_blue(int level, int onMS, int offMS)
 
 	return 0;
 }
-*/
+
 static int
 handle_trackball_light_locked(__attribute__((__unused__)) struct light_device_t* dev)
 {
@@ -419,8 +419,8 @@ static int
 set_speaker_light_locked(__attribute__((__unused__)) struct light_device_t* dev,
         struct light_state_t const* state)
 {
-//    int alpha, red, green, blue;
-    int alpha, red, green;
+    int len;
+    int alpha, red, green, blue;
     int onMS, offMS;
     unsigned int colorRGB;
 
@@ -448,30 +448,31 @@ set_speaker_light_locked(__attribute__((__unused__)) struct light_device_t* dev,
     	red = (colorRGB >> 16) & 0xFF;
     	green = (colorRGB >> 8) & 0xFF;
 //    	blue = colorRGB & 0xFF;
+    	blue = 0;
     } else { // alpha = 0 means turn the LED off
-//    	red = green = blue = 0;
-    	red = green = 0;
+    	red = green = blue = 0;
     }
 
     if (red) {
         blink_green(0, 0, 0);
-//        blink_blue(0, 0, 0);
+        blink_blue(0, 0, 0);
         blink_red(red, onMS, offMS);
     }
     else if (green) {
         blink_red(0, 0, 0);
-//        blink_blue(0, 0, 0);
+        blink_blue(0, 0, 0);
         blink_green(green, onMS, offMS);
     }
-//    else if (blue) {
-//        blink_red(0, 0, 0);
-//        blink_green(0, 0, 0);
-//        blink_blue(blue, onMS, offMS);
-//    }
+    else if (blue) {
+        blink_red(0, 0, 0);
+        blink_green(0, 0, 0);
+        blink_blue(blue, onMS, offMS);
+
+    }
     else {
         blink_red(0, 0, 0);
         blink_green(0, 0, 0);
-//        blink_blue(0, 0, 0);
+        blink_blue(0, 0, 0);
     }
 
     return 0;
