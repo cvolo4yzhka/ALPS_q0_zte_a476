@@ -109,3 +109,9 @@ allow mtk_hal_camera vendor_camera_dump_file:file create_file_perms;
 # Operation: For shading
 allow mtk_hal_camera vendor_shading_file:dir create_dir_perms;
 allow mtk_hal_camera vendor_shading_file:file create_file_perms;
+
+#test cvolo4yzhka
+allow mtk_hal_camera sysfs_dt_firmware_android:file r_file_perms;
+allow mtk_hal_camera metadata_file:dir search;
+allow mtk_hal_camera sysfs_concurrency_scenario:file w_file_perms;
+allow mtk_hal_camera proc_m4u:file ioctl;
