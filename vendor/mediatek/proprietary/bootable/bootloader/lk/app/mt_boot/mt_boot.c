@@ -209,7 +209,7 @@ static uint8_t AB_retry_count;
 #define FDT_BUFF_END	 	"BUFFEND"
 
 #define DEFAULT_SERIAL_NUM "0123456789ABCDEF"
-
+//#define DEFAULT_SERIAL_NUM "AD06068109F4"
 #define KERNEL_64BITS 1
 #define KERNEL_32BITS 0
 
