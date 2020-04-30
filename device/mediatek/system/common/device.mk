@@ -3337,6 +3337,14 @@ ifeq ($(strip $(MSSI_MTK_RCS_UA_SUPPORT)), yes)
   #DEVICE_MANIFEST_FILE += $(LOCAL_PATH)/project_manifest/manifest_rcs.xml
 endif
 
+#Client API feature
+ifeq ($(strip $(MSSI_MTK_VZW_CLIENT_API)),yes)
+  PRODUCT_PACKAGES += verizon.net.sip
+  PRODUCT_PACKAGES += verizon.net.sip.xml
+  PRODUCT_PACKAGES += VerizonTestAPK
+  PRODUCT_COPY_FILES += vendor/mediatek/proprietary/operator/frameworks/ims/OP12/verizon.net.sip.xml:system/etc/permissions/verizon.net.sip.xml
+endif
+
 # adb_r
 ifeq ($(strip $(MTK_BUILD_ROOT)), yes)
   PRODUCT_PACKAGES += adbd_r
