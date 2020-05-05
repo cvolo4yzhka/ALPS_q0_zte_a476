@@ -27,4 +27,8 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/epdg_cert/VeriSignClass3G5.der:$(TARGET_COPY_OUT_VENDOR)/etc/ipsec/ipsec.d/cacerts/VeriSignClass3G5.der:mtk \
 	$(LOCAL_PATH)/epdg_cert/VeriSignUniversalRootCertification.der:$(TARGET_COPY_OUT_VENDOR)/etc/ipsec/ipsec.d/cacerts/VeriSignUniversalRootCertification.der:mtk \
 	$(LOCAL_PATH)/epdg_cert/thawte.der:$(TARGET_COPY_OUT_VENDOR)/etc/ipsec/ipsec.d/cacerts/thawte.der:mtk \
+	$(LOCAL_PATH)/epdg_cert/Root-R3.cer:$(TARGET_COPY_OUT_VENDOR)/etc/ipsec/ipsec.d/cacerts/Root-R3.cer:mtk \
+	$(LOCAL_PATH)/epdg_cert/DigiCertGlobalRootCA.crt:$(TARGET_COPY_OUT_VENDOR)/etc/ipsec/ipsec.d/cacerts/DigiCertGlobalRootCA.crt:mtk \
+	$(LOCAL_PATH)/epdg_cert/DigiCertGlobalRootG2.crt:$(TARGET_COPY_OUT_VENDOR)/etc/ipsec/ipsec.d/cacerts/DigiCertGlobalRootG2.crt:mtk \
+	$(LOCAL_PATH)/epdg_cert/DigiCertGlobalRootG3.crt:$(TARGET_COPY_OUT_VENDOR)/etc/ipsec/ipsec.d/cacerts/DigiCertGlobalRootG3.crt:mtk \
 	$(LOCAL_PATH)/epdg_cert/gold.cer:$(TARGET_COPY_OUT_VENDOR)/etc/ipsec/ipsec.d/cacerts/gold.cer:mtk
