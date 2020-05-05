@@ -72,7 +72,7 @@ FlashIMapFP cust_getFlashIMapFunc_main()
 FLASH_PROJECT_PARA& cust_getFlashProjectPara (int aeScene, int isForceFlash, NVRAM_CAMERA_STROBE_STRUCT* nvrame)
 {
 	static FLASH_PROJECT_PARA para;
-	para.dutyNum = 1;
+	para.dutyNum = 2;
 
 	if(nvrame!=0)
 	{
