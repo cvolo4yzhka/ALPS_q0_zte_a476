@@ -280,11 +280,11 @@ int cust_fillDefaultStrobeNVRam_main (void* data)
     p->engLevel.torchDutyEx[18] = 0;
     p->engLevel.torchDutyEx[19] = 0;
     //af
-    p->engLevel.afDuty = 0;
+    p->engLevel.afDuty = 1;
     //pf, mf, normal
-    p->engLevel.pfDuty = 0;
+    p->engLevel.pfDuty = 1;
     p->engLevel.mfDutyMax = 1;
-    p->engLevel.mfDutyMin = 1;
+    p->engLevel.mfDutyMin = 0;
     //low bat
     p->engLevel.IChangeByVBatEn = 0;
     p->engLevel.vBatL = 3250;
