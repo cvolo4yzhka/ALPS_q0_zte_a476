@@ -3,7 +3,7 @@
 #include "camera_custom_nvram.h"
 #include "camera_custom_types.h"
 #include "camera_custom_AEPlinetable.h"
-#include <cutils/log.h>
+#include <android/log.h>
 #include "flash_feature.h"
 #include "flash_param.h"
 #include "flash_tuning_custom.h"
@@ -280,9 +280,9 @@ int cust_fillDefaultStrobeNVRam_main (void* data)
     p->engLevel.torchDutyEx[18] = 0;
     p->engLevel.torchDutyEx[19] = 0;
     //af
-    p->engLevel.afDuty = 1;
+    p->engLevel.afDuty = 0;
     //pf, mf, normal
-    p->engLevel.pfDuty = 1;
+    p->engLevel.pfDuty = 0;
     p->engLevel.mfDutyMax = 1;
     p->engLevel.mfDutyMin = 0;
     //low bat
