@@ -4920,3 +4920,7 @@ PRODUCT_PACKAGES += apdb
 ifeq ($(strip $(MSSI_MTK_FM_SUPPORT)), yes)
   PRODUCT_PACKAGES += FMRadio
 endif
+
+# Add for Capability Test
+PRODUCT_PACKAGES += CapabilityTest
+PRODUCT_PACKAGES += capability_test
