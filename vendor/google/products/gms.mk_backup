@@ -13,6 +13,7 @@ GMS_PRODUCT_PACKAGES += \
     GoogleFeedback \
     GoogleLocationHistory \
     GoogleOneTimeInitializer \
+    GooglePackageInstaller \
     GooglePartnerSetup \
     GooglePrintRecommendationService \
     GoogleRestore \
@@ -25,7 +26,6 @@ GMS_PRODUCT_PACKAGES += \
     SetupWizard \
     WebViewGoogle \
     Wellbeing
-#    GooglePackageInstaller \
 
 # GMS mandatory libraries
 PRODUCT_PACKAGES += com.google.android.maps.jar
@@ -50,62 +50,54 @@ GMS_PRODUCT_PACKAGES += \
 
 # Overlay for GMS devices: default backup transport in SettingsProvider
 PRODUCT_PACKAGE_OVERLAYS += $(ANDROID_PARTNER_GMS_HOME)/products/gms_overlay
-#overlay def wallpaper
-#PRODUCT_PACKAGE_OVERLAYS += $(ANDROID_PARTNER_GMS_HOME)/products/qt_beta_overlay
+
+PRODUCT_PACKAGE_OVERLAYS += $(ANDROID_PARTNER_GMS_HOME)/products/qt_beta_overlay
 
 # Overlay for GoogleDialer
 ifneq ($(strip $(MTK_TB_WIFI_3G_MODE)),WIFI_ONLY)
-#PRODUCT_PACKAGE_OVERLAYS += $(ANDROID_PARTNER_GMS_HOME)/apps/GoogleDialer/overlay
+PRODUCT_PACKAGE_OVERLAYS += $(ANDROID_PARTNER_GMS_HOME)/apps/GoogleDialer/overlay
 endif
 
 # GMS mandatory application packages
 GMS_PRODUCT_PACKAGES += \
     Chrome \
-    CalculatorGoogle \
-#    AssistantShell
-#    Drive \
-#    Gmail2 \
-#    Duo \
-#    Maps \
-#    YTMusic \
-#    Photos \
-#    Velvet \
-#    Videos \
-#    YouTube \
-
+    Drive \
+    Gmail2 \
+    Duo \
+    Maps \
+    YTMusic \
+    Photos \
+    Velvet \
+    Videos \
+    YouTube \
+    AssistantShell
 
 # GMS comms suite
 GMS_PRODUCT_PACKAGES += \
-    CarrierServices
-#    GoogleContacts
+    CarrierServices \
+    GoogleContacts
 
 ifneq ($(strip $(MTK_TB_WIFI_3G_MODE)),WIFI_ONLY)
-#GMS_PRODUCT_PACKAGES += \
-#    GoogleDialer \
-#    Messages
+GMS_PRODUCT_PACKAGES += \
+    GoogleDialer \
+    Messages
 
 endif
 
 # GMS optional application packages
-#GMS_PRODUCT_PACKAGES += \
-#    CalendarGoogle \
-#    LatinImeGoogle
+GMS_PRODUCT_PACKAGES += \
+    CalendarGoogle \
+    LatinImeGoogle
 
 GMS_PRODUCT_PACKAGES += \
-    Launcher3NoQsb
-#    FilesGoogle \
-#    SearchLauncherQRef
+    FilesGoogle \
+    SearchLauncherQRef
 
 # Add GMS package into system product packages
 PRODUCT_PACKAGES += $(GMS_PRODUCT_PACKAGES)
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.threebutton;com.android.theme.icon.roundedrect
-#    ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.threebutton;com.android.theme.icon.squircle
-#com.android.theme.icon.square
-#com.android.theme.icon.teardrop
-#com.android.theme.icon.squircle
-#com.android.theme.icon.roundedrect
+    ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.threebutton;com.android.theme.icon.squircle
 
 # Add acsa property for CarrierServices
 PRODUCT_PRODUCT_PROPERTIES += \

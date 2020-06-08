@@ -21,6 +21,8 @@ else ifeq ($(strip $(EEA_TYPE)), type4b)
 $(call inherit-product-if-exists, vendor/google/products/gms_go_eea_type4b.mk)
 else ifeq ($(strip $(EEA_TYPE)), type4c)
 $(call inherit-product-if-exists, vendor/google/products/gms_go_eea_type4c.mk)
+else ifeq ($(strip $(EEA_TYPE)), eea_v2)
+$(call inherit-product-if-exists, vendor/google/products/gms_go_eea_v2_type4c.mk)
 else
 ifeq ($(strip $(MSSI_CUSTOM_CONFIG_MAX_DRAM_SIZE)), 0x80000000)
 $(call inherit-product-if-exists, vendor/google/products/gms_go_2gb.mk)
@@ -45,6 +47,8 @@ else ifeq ($(strip $(EEA_TYPE)), type4b)
 $(call inherit-product-if-exists, vendor/google/products/gms_eea_type4b.mk)
 else ifeq ($(strip $(EEA_TYPE)), type4c)
 $(call inherit-product-if-exists, vendor/google/products/gms_eea_type4c.mk)
+else ifeq ($(strip $(EEA_TYPE)), eea_v2)
+$(call inherit-product-if-exists, vendor/google/products/gms_eea_v2_type4c.mk)
 else
 $(call inherit-product-if-exists, vendor/google/products/gms.mk)
 endif
