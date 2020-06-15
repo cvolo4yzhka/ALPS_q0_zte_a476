@@ -20,6 +20,7 @@ PRODUCT_COPY_FILES += $(LOCAL_PATH)/meta_init.project.rc:$(TARGET_COPY_OUT_VENDO
 
 PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=320
 PRODUCT_PROPERTY_OVERRIDES += qemu.hw.mainkeys=1
+PRODUCT_PROPERTY_OVERRIDES += ro.boot.hardware.revision=MT6735P/4x1GHz/RAM-2Gb/ROM-16GB
 
 # thermal.conf and thermal_eng.conf:with BCCT 
 # thermal_NoBCCT.conf and thermal_eng_NoBCCT.conf:no BCCT 
