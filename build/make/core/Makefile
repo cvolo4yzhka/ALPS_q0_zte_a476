@@ -303,7 +303,11 @@ endif
 ifeq ($(DEFAULT_SYSTEM_DEV_CERTIFICATE),build/target/product/security/testkey)
 BUILD_KEYS := test-keys
 else
+ifneq ($(wildcard $(strip $(MTK_TARGET_PROJECT_FOLDER))/security),)
+BUILD_KEYS := release-keys
+else
 BUILD_KEYS := dev-keys
+endif
 endif
 BUILD_VERSION_TAGS += $(BUILD_KEYS)
 BUILD_VERSION_TAGS := $(subst $(space),$(comma),$(sort $(BUILD_VERSION_TAGS)))
