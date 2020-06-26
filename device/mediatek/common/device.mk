@@ -2296,6 +2296,8 @@ ifeq ($(strip $(TRUSTONIC_TEE_SUPPORT)), yes)
     PRODUCT_PACKAGES += android.hardware.keymaster@4.0-service.trustonic
 else ifeq ($(strip $(MICROTRUST_TEE_SUPPORT)), yes)
     PRODUCT_PACKAGES += android.hardware.keymaster@4.0-service.beanpod
+else ifeq ($(strip $(MICROTRUST_TEE_LITE_SUPPORT)), yes)
+    PRODUCT_PACKAGES += android.hardware.keymaster@4.0-service.beanpod.lite
 else ifeq ($(strip $(TRUSTKERNEL_TEE_SUPPORT)), yes)
     PRODUCT_PACKAGES += android.hardware.keymaster@4.0-service.trustkernel
 else ifeq ($(strip $(MTK_GOOGLE_TRUSTY_SUPPORT)), yes)
@@ -2420,6 +2422,18 @@ ifeq ($(strip $(MTK_GOOGLE_TRUSTY_SUPPORT)), yes)
   PRODUCT_PROPERTY_OVERRIDES += ro.hardware.kmsetkey=trusty
 endif
 
+ifeq ($(strip $(MICROTRUST_TEE_LITE_SUPPORT)), yes)
+  PRODUCT_PACKAGES += gatekeeper.itrusty
+  PRODUCT_PACKAGES += keystore.itrusty
+  PRODUCT_PACKAGES += istorageproxyd
+  PRODUCT_PACKAGES += libitrusty
+  PRODUCT_PACKAGES += kmsetkey.itrusty
+  PRODUCT_PROPERTY_OVERRIDES += ro.vendor.mtk_microtrust_tee_support=1
+  PRODUCT_PROPERTY_OVERRIDES += ro.hardware.gatekeeper=itrusty
+  PRODUCT_PROPERTY_OVERRIDES += ro.hardware.keystore=itrusty
+  PRODUCT_PROPERTY_OVERRIDES += ro.hardware.kmsetkey=itrusty
+endif #MICROTRUST_TEE_LITE_SUPPORT
+
 ifeq ($(strip $(MICROTRUST_TEE_SUPPORT)), yes)
   PRODUCT_PACKAGES += teei_daemon
   PRODUCT_PACKAGES += libmtee
@@ -2433,7 +2447,7 @@ ifeq ($(strip $(MICROTRUST_TEE_SUPPORT)), yes)
    PRODUCT_PACKAGES += AVCSecureVdecCA
   endif
   endif
-endif
+endif #MICROTRUST_TEE_SUPPORT
 
 ifeq ($(strip $(MTK_SEC_VIDEO_PATH_SUPPORT)), yes)
   PRODUCT_PROPERTY_OVERRIDES += ro.vendor.mtk_sec_video_path_support=1
@@ -4624,14 +4638,10 @@ PRODUCT_PACKAGES += \
   vendor.mediatek.hardware.pq@2.3-impl
 
 # MMS HIDL
+DEVICE_MANIFEST_FILE += device/mediatek/vendor/common/project_manifest/manifest_mmservice.xml
 PRODUCT_PACKAGES += \
-   vendor.mediatek.hardware.mms@1.3-impl
-ifeq ($(strip $(MTK_GMO_RAM_OPTIMIZE)), yes)
-PRODUCT_PACKAGES += vendor.mediatek.hardware.mms@1.3-service-lazy
-else
-PRODUCT_PACKAGES += vendor.mediatek.hardware.mms@1.3-service
-endif
-
+  vendor.mediatek.hardware.mms@1.5-service \
+  vendor.mediatek.hardware.mms@1.5-impl
 
 # mtk audio/video extractors
 ifeq ($(strip $(MSSI_MTK_FLV_PLAYBACK_SUPPORT)), yes)
