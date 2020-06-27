@@ -1,4 +1,4 @@
-ifeq ($(strip $(MTK_MIRAVISION_SETTING_SUPPORT)),yes)
+
 
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
@@ -57,4 +57,4 @@ endif
 # Use the folloing include to make our test apk.
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
-endif
+

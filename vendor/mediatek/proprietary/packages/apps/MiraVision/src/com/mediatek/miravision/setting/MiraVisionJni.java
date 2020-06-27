@@ -389,8 +389,6 @@ public class MiraVisionJni {
 
     // private static native void nativeSetGammaIndex(int index);
 
-    private static final String AAL_FUNC_PROPERTY_NAME = "persist.vendor.sys.aal.function";
-
     public static final int AAL_FUNC_CABC = 0x2;
     public static final int AAL_FUNC_DRE = 0x4;
 
@@ -405,7 +403,7 @@ public class MiraVisionJni {
 
     public static int getAALFunction() {
         ///M:ALPS03683084 change default from AAL_FUNC_CABC | AAL_FUNC_DRE to AAL_FUNC_CABC
-        return Utils.getIntProperty(AAL_FUNC_PROPERTY_NAME, AAL_FUNC_CABC);
+        return PictureQuality.getAALFunction();
     }
 
     public static int getDefaultAALFunction() {
