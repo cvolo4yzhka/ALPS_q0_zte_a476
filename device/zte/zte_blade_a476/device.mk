@@ -19,6 +19,17 @@ PRODUCT_COPY_FILES += $(LOCAL_PATH)/meta_init.project.rc:$(TARGET_COPY_OUT_VENDO
 #PRODUCT_COPY_FILES += $(LOCAL_PATH)/MT6735_Android_scatter.txt:MT6735_Android_scatter.txt
 
 PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=320
+#off screen key
+PRODUCT_PROPERTY_OVERRIDES += qemu.hw.mainkeys=1
+#hardware info
+PRODUCT_PROPERTY_OVERRIDES += ro.boot.hardware.revision=MT6735P/4x1GHz/RAM-2Gb/ROM-16GB
+#custom build info: name + date
+PRODUCT_PROPERTY_OVERRIDES += ro.vendor.mediatek.version.release=ZTE_Blade_A476_Q0_$(shell date +%d.%m.%Y-%H:%M)
+#Default ringtone and volume in call (thanks @nik-kst)
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.config.vc_call_vol_steps=7 \
+ro.config.media_vol_steps=25 \
+ro.config.ringtone=Ring_Synth_04.ogg
 
 # thermal.conf and thermal_eng.conf:with BCCT 
 # thermal_NoBCCT.conf and thermal_eng_NoBCCT.conf:no BCCT 
@@ -122,17 +133,6 @@ $(call inherit-product-if-exists, vendor/mediatek/libs/$(MTK_TARGET_PROJECT)/dev
 #A-Go
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-#off screen key
-PRODUCT_PROPERTY_OVERRIDES += qemu.hw.mainkeys=1
-#hardware info
-PRODUCT_PROPERTY_OVERRIDES += ro.boot.hardware.revision=MT6735P/4x1GHz/RAM-2Gb/ROM-16GB
-#custom build info: name + date
-PRODUCT_PROPERTY_OVERRIDES += ro.vendor.mediatek.version.release=ZTE_Blade_A476_Q0_$(shell date +%d.%m.%Y-%H:%M)
-#Defafult ringtone and volume in call (thanks @nik-kst)
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.config.vc_call_vol_steps=7 \
-ro.config.media_vol_steps=25 \
-ro.config.ringtone=Ring_Synth_04.ogg
 
 # copy bootanimation
 PRODUCT_COPY_FILES += \
