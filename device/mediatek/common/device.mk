@@ -3129,10 +3129,11 @@ else
   PRODUCT_PROPERTY_OVERRIDES += persist.log.tag.MtkEmbmsAdaptor=D
   PRODUCT_PROPERTY_OVERRIDES += persist.log.tag.ExternalSimMgr=I
   PRODUCT_PROPERTY_OVERRIDES += persist.log.tag.VsimAdaptor=I
-  PRODUCT_PROPERTY_OVERRIDES += persist.log.tag.NetAgentService=I
-  PRODUCT_PROPERTY_OVERRIDES += persist.log.tag.NetAgent_IO=I
-  PRODUCT_PROPERTY_OVERRIDES += persist.log.tag.NetLnkEventHdlr=I
-  PRODUCT_PROPERTY_OVERRIDES += persist.log.tag.RmcDcCommon=I
+  PRODUCT_PROPERTY_OVERRIDES += persist.log.tag.NetAgentService=D
+  PRODUCT_PROPERTY_OVERRIDES += persist.log.tag.NetAgent_IO=D
+  PRODUCT_PROPERTY_OVERRIDES += persist.log.tag.NetLnkEventHdlr=D
+  PRODUCT_PROPERTY_OVERRIDES += persist.log.tag.RtcDC=D
+  PRODUCT_PROPERTY_OVERRIDES += persist.log.tag.RmcDcCommon=D
   PRODUCT_PROPERTY_OVERRIDES += persist.log.tag.MTKSST=V
   PRODUCT_PROPERTY_OVERRIDES += persist.log.tag.RfxRilUtils=I
   PRODUCT_PROPERTY_OVERRIDES += persist.log.tag.RfxOpUtils=I
@@ -3159,7 +3160,7 @@ else
   PRODUCT_PROPERTY_OVERRIDES += persist.log.tag.RIL-Parcel=I
   PRODUCT_PROPERTY_OVERRIDES += persist.log.tag.RIL-Socket=I
   PRODUCT_PROPERTY_OVERRIDES += persist.log.tag.RIL-SocListen=I
-  PRODUCT_PROPERTY_OVERRIDES += persist.log.tag.RIL-Netlink=I
+  PRODUCT_PROPERTY_OVERRIDES += persist.log.tag.RIL-Netlink=D
   PRODUCT_PROPERTY_OVERRIDES += persist.log.tag.VoLTE_Stack=D
   PRODUCT_PROPERTY_OVERRIDES += persist.log.tag.VoLTE_IF_CH=D
   PRODUCT_PROPERTY_OVERRIDES += persist.log.tag.VoLTE_WAKELOCK=D
@@ -4638,7 +4639,7 @@ PRODUCT_PACKAGES += \
   vendor.mediatek.hardware.pq@2.3-impl
 
 # MMS HIDL
-DEVICE_MANIFEST_FILE += device/mediatek/vendor/common/project_manifest/manifest_mmservice.xml
+DEVICE_MANIFEST_FILE += device/mediatek/common/project_manifest/manifest_mmservice.xml
 PRODUCT_PACKAGES += \
   vendor.mediatek.hardware.mms@1.5-service \
   vendor.mediatek.hardware.mms@1.5-impl
