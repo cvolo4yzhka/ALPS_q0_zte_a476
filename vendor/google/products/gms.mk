@@ -61,7 +61,7 @@ endif
 # GMS mandatory application packages
 GMS_PRODUCT_PACKAGES += \
     Chrome \
-    CalculatorGoogle \
+    CalculatorGoogle
 #    AssistantShell
 #    Drive \
 #    Gmail2 \
@@ -115,4 +115,4 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.setupwizard.rotation_locked=true \
     setupwizard.theme=glif_v3_light \
     ro.opa.eligible_device=true \
-    ro.com.google.gmsversion=10_202005
+    ro.com.google.gmsversion=10_202008
