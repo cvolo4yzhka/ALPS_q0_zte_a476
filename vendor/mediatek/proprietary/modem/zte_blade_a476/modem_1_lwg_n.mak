@@ -33,7 +33,7 @@
 #
 # *************************************************************************
 
-# Generated at 2020-07-27 15:32:57
+# Generated at 2020-08-24 20:10:10
 
 # ------------------------------ Modem specification
 MODEM_SPEC = MTK_MODEM_LWG
@@ -319,7 +319,7 @@ OTP_SUPPORT = FALSE
   # Switch-ability:
   #   Switchable
 
-BAND_SUPPORT = DUAL900
+BAND_SUPPORT = QUAD
   # Description:
   #   Described the support band of RF
   # Option Values:
@@ -367,7 +367,7 @@ UMTS_RF_MODULE = MT6735_UMTS_FDD_MT6169_CUSTOM
   #   Non-switchable
 
 # ------------------------------ Verno information
-VERNO = MOLY.LR9.W1444.MD.LWTG.MP.V309.4
+VERNO = MOLY.LR9.W1444.MD.LWTG.MP.V313
 BUILD = BUILD_NO
 BRANCH = LR9.W1444.MD.LWTG.MP
 # ------------------------------ System configurations
@@ -441,7 +441,7 @@ PROJECT_MAKEFILE_EXT = BIRD_Q0MP1_K37MV1_BSP(LWG_DSDS_COTSX)_EXT
 #
 # *************************************************************************
 
-# Generated at 2020-07-27 15:32:57
+# Generated at 2020-08-24 20:10:10
 
 CHK_ENV_FLAG = TRUE
   # Description:
@@ -2521,7 +2521,7 @@ OPTR_SPEC_MODEM = NONE
   # Switch-ability:
   #   Non-switchable
 
-ORIGINAL_VERNO = MOLY.LR9.W1444.MD.LWTG.MP.V309.4
+ORIGINAL_VERNO = MOLY.LR9.W1444.MD.LWTG.MP.V313
 
 OS_TICK_PERIOD_IN_US = 5000
   # Description:
