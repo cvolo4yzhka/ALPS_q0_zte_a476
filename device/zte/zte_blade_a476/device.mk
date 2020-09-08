@@ -76,7 +76,7 @@ PRODUCT_COPY_FILES += $(LOCAL_PATH)/android.hardware.telephony.gsm.xml:$(TARGET_
 #PRODUCT_PROPERTY_OVERRIDES += dalvik.vm.heapsize=256m
 
 # meta tool
-PRODUCT_PROPERTY_OVERRIDES += ro.vendor.mediatek.platform=MT6735
+PRODUCT_PROPERTY_OVERRIDES += ro.vendor.mediatek.platform=MT6735M
 
 # set Telephony property - SIM count
 SIM_COUNT := 2

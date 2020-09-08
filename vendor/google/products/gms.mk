@@ -13,6 +13,7 @@ GMS_PRODUCT_PACKAGES += \
     GoogleFeedback \
     GoogleLocationHistory \
     GoogleOneTimeInitializer \
+    GooglePackageInstaller \
     GooglePartnerSetup \
     GooglePrintRecommendationService \
     GoogleRestore \
