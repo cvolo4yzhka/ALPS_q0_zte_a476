@@ -24,7 +24,7 @@ PRODUCT_PROPERTY_OVERRIDES += qemu.hw.mainkeys=1
 #hardware info
 PRODUCT_PROPERTY_OVERRIDES += ro.boot.hardware.revision=MT6735P/4x1GHz/RAM-2Gb/ROM-16GB
 #custom build info: name + date
-PRODUCT_PROPERTY_OVERRIDES += ro.vendor.mediatek.version.release=ZTE_Blade_A476_Q0_$(shell date +%d.%m.%Y-%H:%M)
+PRODUCT_PROPERTY_OVERRIDES += ro.vendor.mediatek.version.release=ZTE_Blade_A476_Q0_$(shell date +%d.%m.%Y)
 #Default ringtone and volume in call (thanks @nik-kst)
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.config.vc_call_vol_steps=7 \
@@ -137,3 +137,8 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # copy bootanimation
 PRODUCT_COPY_FILES += \
 	$(call find-copy-subdir-files,*,$(LOCAL_PATH)/system,system)
+
+# Revert Call Record service when Build with GAPPS
+ifeq ($(strip $(BUILD_GMS)), yes)
+	PRODUCT_PACKAGES += CallRecorderService
+endif
