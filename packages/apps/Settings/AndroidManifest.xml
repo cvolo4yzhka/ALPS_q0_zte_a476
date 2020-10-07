@@ -2773,7 +2773,7 @@
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                        android:value="com.android.settings.wifi.calling.WifiCallingSettings" />
             <meta-data android:name="com.android.settings.dismiss"
-                android:value="14" />
+                android:value="0" />
             <meta-data android:name="com.android.settings.title"
                 android:resource="@string/wifi_calling_suggestion_title" />
             <meta-data android:name="com.android.settings.summary"
