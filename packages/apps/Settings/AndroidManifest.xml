@@ -764,7 +764,7 @@
                 android:value="true" />
         </activity>
 
-        <activity
+        <!--activity
             android:name=".notification.ZenSuggestionActivity"
             android:label="@string/zen_mode_settings_title"
             android:icon="@drawable/ic_suggestion_dnd"
@@ -784,7 +784,7 @@
                        android:resource="@string/zen_suggestion_title" />
             <meta-data android:name="com.android.settings.summary"
                        android:resource="@string/zen_suggestion_summary" />
-        </activity>
+        </activity-->
 
         <activity
             android:name=".notification.ZenOnboardingActivity"
@@ -826,7 +826,7 @@
                        android:value="com.android.settings.wallpaper.WallpaperTypeSettings" />
         </activity>
 
-        <activity android:name=".wallpaper.WallpaperSuggestionActivity"
+        <!--activity android:name=".wallpaper.WallpaperSuggestionActivity"
                   android:label="@string/wallpaper_settings_title"
                   android:icon="@drawable/ic_wallpaper"
                   android:theme="@android:style/Theme.NoDisplay">
@@ -845,9 +845,9 @@
             <meta-data android:name="com.android.settings.dismiss"
                        android:value="0" />
             <meta-data android:name="com.android.settings.icon_tintable" android:value="true" />
-        </activity>
+        </activity-->
 
-        <activity android:name=".wallpaper.StyleSuggestionActivity"
+        <!--activity android:name=".wallpaper.StyleSuggestionActivity"
                   android:label="@string/style_suggestion_title"
                   android:icon="@drawable/ic_theme"
                   android:theme="@android:style/Theme.NoDisplay">
@@ -862,7 +862,7 @@
             <meta-data android:name="com.android.settings.dismiss"
                        android:value="0" />
             <meta-data android:name="com.android.settings.icon_tintable" android:value="true" />
-        </activity>
+        </activity-->
 
         <activity
             android:name="Settings$ZenModeScheduleRuleSettingsActivity"
@@ -935,7 +935,7 @@
                 android:value="true" />
         </activity>
 
-        <activity
+        <!--activity
             android:name="Settings$NightDisplaySuggestionActivity"
             android:enabled="@*android:bool/config_nightDisplayAvailable"
             android:icon="@drawable/ic_suggestion_night_display">
@@ -953,7 +953,7 @@
                 android:value="true" />
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.display.NightDisplaySettings" />
-        </activity>
+        </activity-->
 
         <activity android:name=".Settings$MyDeviceInfoActivity"
                   android:label="@string/about_settings"
@@ -1735,7 +1735,7 @@
                 android:value="true" />
         </activity>
 
-        <activity android:name=".password.ScreenLockSuggestionActivity"
+        <!--activity android:name=".password.ScreenLockSuggestionActivity"
             android:icon="@drawable/ic_suggestion_security">
             <intent-filter android:priority="1">
                 <action android:name="android.intent.action.MAIN" />
@@ -1747,9 +1747,9 @@
             <meta-data android:name="com.android.settings.summary"
                        android:resource="@string/suggested_lock_settings_summary" />
             <meta-data android:name="com.android.settings.icon_tintable" android:value="true" />
-        </activity>
+        </activity-->
 
-        <activity android:name=".biometrics.fingerprint.FingerprintEnrollSuggestionActivity"
+        <!--activity android:name=".biometrics.fingerprint.FingerprintEnrollSuggestionActivity"
             android:icon="@drawable/ic_suggestion_fingerprint">
             <intent-filter android:priority="2">
                 <action android:name="android.intent.action.MAIN" />
@@ -1763,7 +1763,7 @@
             <meta-data android:name="com.android.settings.summary"
                 android:resource="@string/suggested_fingerprint_lock_settings_summary" />
             <meta-data android:name="com.android.settings.icon_tintable" android:value="true" />
-        </activity>
+        </activity-->
 
         <activity android:name=".password.ChooseLockGeneric$InternalActivity"
             android:exported="false"
@@ -2763,7 +2763,7 @@
                        android:value="true" />
         </activity>
 
-        <activity android:name=".wifi.calling.WifiCallingSuggestionActivity"
+        <!--activity android:name=".wifi.calling.WifiCallingSuggestionActivity"
                   android:label="@string/wifi_calling_settings_title"
                   android:icon="@drawable/ic_suggestion_wireless">
             <intent-filter>
@@ -2778,7 +2778,7 @@
                 android:resource="@string/wifi_calling_suggestion_title" />
             <meta-data android:name="com.android.settings.summary"
                 android:resource="@string/wifi_calling_suggestion_summary" />
-        </activity>
+        </activity-->
 
         <provider
             android:name=".search.SettingsSearchIndexablesProvider"
