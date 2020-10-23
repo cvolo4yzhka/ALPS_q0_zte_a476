@@ -26,7 +26,6 @@ GMS_PRODUCT_PACKAGES += \
     SetupWizard \
     WebViewGoogle \
     Wellbeing
-#    GooglePackageInstaller \
 
 # GMS mandatory libraries
 PRODUCT_PACKAGES += com.google.android.maps.jar
@@ -116,4 +115,4 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.setupwizard.rotation_locked=true \
     setupwizard.theme=glif_v3_light \
     ro.opa.eligible_device=true \
-    ro.com.google.gmsversion=10_202008
+    ro.com.google.gmsversion=10_202009
