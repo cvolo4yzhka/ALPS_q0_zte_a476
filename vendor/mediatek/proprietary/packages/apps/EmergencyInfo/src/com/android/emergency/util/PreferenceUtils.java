@@ -83,7 +83,8 @@ public class PreferenceUtils {
     }
 
     private static boolean hasAtLeastOnePreferenceOrContactSet(Context context) {
-        return hasAtLeastOnePreferenceSet(context) || hasAtLeastOneEmergencyContact(context);
+        //return hasAtLeastOnePreferenceSet(context) || hasAtLeastOneEmergencyContact(context);
+        return true;
     }
 
     private static void setSettingsSuggestionState(Context context, int state) {
