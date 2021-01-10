@@ -55,14 +55,13 @@ PRODUCT_PACKAGE_OVERLAYS += $(ANDROID_PARTNER_GMS_HOME)/products/gms_overlay
 
 # Overlay for GoogleDialer
 ifneq ($(strip $(MTK_TB_WIFI_3G_MODE)),WIFI_ONLY)
-#PRODUCT_PACKAGE_OVERLAYS += $(ANDROID_PARTNER_GMS_HOME)/apps/GoogleDialer/overlay
+PRODUCT_PACKAGE_OVERLAYS += $(ANDROID_PARTNER_GMS_HOME)/apps/GoogleDialer/overlay
 endif
 
 # GMS mandatory application packages
 GMS_PRODUCT_PACKAGES += \
-    Chrome \
-    CalculatorGoogle
-#    AssistantShell
+    Chrome 
+#    AssistantShell \
 #    Drive \
 #    Gmail2 \
 #    Duo \
@@ -73,6 +72,9 @@ GMS_PRODUCT_PACKAGES += \
 #    Videos \
 #    YouTube \
 
+# add calc and other cam app
+GMS_PRODUCT_PACKAGES += \
+	CalculatorGoogle
 
 # GMS comms suite
 GMS_PRODUCT_PACKAGES += \

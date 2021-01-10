@@ -3900,16 +3900,22 @@ ifeq ($(BUILD_GMS), yes)
     # Mainline common and must APK
     PRODUCT_PACKAGES += \
         GoogleExtServicesPrebuilt \
+        GoogleExtServices \
         ModuleMetadataGooglePrebuilt \
-        GooglePermissionControllerPrebuilt
+        GooglePermissionControllerPrebuilt \
+        GooglePermissionController
 
     # Mainline other APK dependent on A-Go configuration
     ifneq ($(strip $(MTK_GMO_RAM_OPTIMIZE)), yes)
         PRODUCT_PACKAGES += \
-            GoogleDocumentsUIPrebuilt\
-            GoogleCaptivePortalLogin\
-            GoogleNetworkStack\
-            GoogleNetworkPermissionConfig
+            GoogleDocumentsUIPrebuilt \
+            DocumentsUIGoogle \
+            GoogleCaptivePortalLogin \
+            CaptivePortalLoginGoogle \
+            GoogleNetworkStack \
+            NetworkStackGoogle \
+            GoogleNetworkPermissionConfig \
+            NetworkPermissionConfigGoogle
         PRODUCT_MAINLINE_SEPOLICY_DEV_CERTIFICATES := vendor/partner_modules/NetworkStackPrebuilt
     else
         PRODUCT_PACKAGES += \
@@ -3925,6 +3931,13 @@ ifeq ($(BUILD_GMS), yes)
         ifneq ($(strip $(MTK_GMO_RAM_OPTIMIZE)), yes)
             # Enable updating of APEXes
             $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
+            PRODUCT_PACKAGES += \
+                com.google.android.conscrypt \
+                com.google.android.resolv \
+                com.google.android.media \
+                com.google.android.media.swcodec \
+                com.google.android.tzdata
         else
             PRODUCT_PROPERTY_OVERRIDES += ro.apex.updatable=false
             TARGET_FLATTEN_APEX := true

@@ -33,7 +33,7 @@
 #
 # *************************************************************************
 
-# Generated at 2020-11-23 16:33:43
+# Generated at 2021-01-07 19:39:30
 
 # ------------------------------ Modem specification
 MODEM_SPEC = MTK_MODEM_LWG
@@ -367,7 +367,7 @@ UMTS_RF_MODULE = MT6735_UMTS_FDD_MT6169_CUSTOM
   #   Non-switchable
 
 # ------------------------------ Verno information
-VERNO = MD.LWTG.MP.V326.5
+VERNO = MD.LWTG.MP.V331
 BUILD = BUILD_NO
 BRANCH = LR9.W1444.MD.LWTG.MP
 # ------------------------------ System configurations
@@ -441,7 +441,7 @@ PROJECT_MAKEFILE_EXT = BIRD_Q0MP1_K37MV1_BSP(LWG_DSDS_COTSX)_EXT
 #
 # *************************************************************************
 
-# Generated at 2020-11-23 16:33:43
+# Generated at 2021-01-07 19:39:30
 
 CHK_ENV_FLAG = TRUE
   # Description:
@@ -1359,7 +1359,7 @@ VOHSPA_SUPPORT = FALSE
 
 VOLTE_SUPPORT = TRUE
   # Description:
-  #   Enable or disable Voice over LTE
+  #   This is for LTE project. VOLTE is part of IMS but it is not only for voice service, but also for SS, MWI, ECT, USSI,etc. So VOLTE_SUPPORT can only effective when IMS_SUPPORT is set to TRUE also.
   # Option Values:
   #   FALSE: Note support VoLTE
   #   TRUE: Support the VoLTE
@@ -2521,7 +2521,7 @@ OPTR_SPEC_MODEM = NONE
   # Switch-ability:
   #   Non-switchable
 
-ORIGINAL_VERNO = MOLY.LR9.W1444.MD.LWTG.MP.V326.5
+ORIGINAL_VERNO = MOLY.LR9.W1444.MD.LWTG.MP.V331
 
 OS_TICK_PERIOD_IN_US = 5000
   # Description:

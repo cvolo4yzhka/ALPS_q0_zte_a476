@@ -181,20 +181,21 @@ else
 #if 1
     //  Preview Frame Rate Range
     FTABLE_CONFIG_AS_TYPE_OF_USER(
-        KEY_AS_(MtkCameraParameters::KEY_PREVIEW_FPS_RANGE), 
+        KEY_AS_(MtkCameraParameters::KEY_PREVIEW_FPS_RANGE),
         SCENE_AS_DEFAULT_SCENE(
-            ITEM_AS_DEFAULT_("5000,30000"), 
+            ITEM_AS_DEFAULT_("5000,30000"),
             ITEM_AS_USER_LIST_(
-                "(15000,15000)", 
-                "(24000,24000)", 
-                "(5000,30000)", 
-                "(30000,30000)", 
-#if 0 //#if (1 == SLOW_MOTION_VIDEO_SUPPORTED)
+                "(15000,15000)",
+                "(20000,20000)",
+                "(24000,24000)",
+                "(5000,30000)",
+                "(30000,30000)",
+#if 1 //#if (1 == SLOW_MOTION_VIDEO_SUPPORTED)
                 "(60000,60000)",
                 "(120000,120000)",
 #endif 
             )
-        ), 
+        ),
     )
 #endif
     //==========================================================================
@@ -403,16 +404,16 @@ else
         ), 
     )
 #endif
-#if 0 //#if (1 == SLOW_MOTION_VIDEO_SUPPORTED)
+#if 1 //#if (1 == SLOW_MOTION_VIDEO_SUPPORTED)
     //	Slow Motion
     FTABLE_CONFIG_AS_TYPE_OF_DEFAULT_VALUES(
-        KEY_AS_(MtkCameraParameters::KEY_HSVR_SIZE_FPS), 
+        KEY_AS_(MtkCameraParameters::KEY_HSVR_SIZE_FPS),
         SCENE_AS_DEFAULT_SCENE(
             ITEM_AS_DEFAULT_("640x480x120"),
             ITEM_AS_VALUES_(
-                "640x480x120" 
+                "640x480x120"
             )
-        ), 
+        ),
     )
 #endif
 END_FTABLE_SCENE_INDEP()

@@ -6,7 +6,7 @@ export CROSS_COMPILE=~/alps/q0_alps_zte_a476/prebuilts/gcc/linux-x86/arm/arm-lin
 #set directory for build output
 export  KBUILD_OUTPUT=out32
 #set defconfig
-make zte_blade_a476_debug_defconfig
+make zte_blade_a476_defconfig
 #start compile
-make zImage-dtb -j1 2>&1 | tee out32/build.log
+make zImage-dtb -j5 2>&1 | tee out32/build.log
 #make menuconfig
