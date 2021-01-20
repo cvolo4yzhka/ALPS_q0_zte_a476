@@ -18,6 +18,8 @@
 -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+	<!-- Application name shown in Launcher [CHAR LIMIT=20] -->
+    <string name="app_name">Wallpaper</string>
     <!-- Button label on Wallpaper picker screen; user selects this button to set a specific wallpaper -->
     <string name="wallpaper_instructions">Set wallpaper</string>
     <!-- Error message when an image is selected as a wallpaper,
