@@ -332,7 +332,7 @@
     <string name="date_and_time_settings_summary" msgid="7095318986757583584">"Установка даты, времени, часового пояса и формата"</string>
     <string name="date_time_auto" msgid="4290527098376721491">"Использовать время сети"</string>
     <string name="zone_auto_title" msgid="3217703906014135437">"Использовать часовой пояс сети"</string>
-    <string name="date_time_24hour_auto" msgid="6276269188890332084">"Региональные настройки по умолчанию"</string>
+    <string name="date_time_24hour_auto" msgid="6276269188890332084">"Автоматические региональные настройки"</string>
     <string name="date_time_24hour_title" msgid="3203537578602803850">"24-часовой формат"</string>
     <string name="date_time_24hour" msgid="1193032284921000063">"24-часовой формат"</string>
     <string name="date_time_set_time_title" msgid="6296795651349047016">"Время"</string>
@@ -340,6 +340,12 @@
     <string name="date_time_set_timezone_title" msgid="3047322337368233197">"Часовой пояс"</string>
     <string name="date_time_set_timezone" msgid="5045627174274377814">"Часовой пояс"</string>
     <string name="date_time_set_date_title" msgid="6928286765325608604">"Дата"</string>
+    <string name="date_time_set_date">"Дата"</string>
+    <string name="date_time_set_time">"Время"</string>
+    <string name="zone_auto_summaryOff">"Установить часовой пояс вручную"</string>
+    <string name="zone_auto_summaryOn">"Использовать часовой пояс сети"</string>
+    <string name="zone_auto">"Автоматический часовой пояс"</string>
+    <string name="date_time_24hour_auto_summary">"Региональные настройки по умолчанию"</string>
     <string name="date_time_search_region" msgid="2478334699004021972">"Поиск по региону"</string>
     <string name="date_time_select_region" msgid="5434001881313168586">"Регион"</string>
     <string name="date_time_select_fixed_offset_time_zones" msgid="6084375085203448645">"Разница с UTC"</string>
