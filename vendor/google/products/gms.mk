@@ -61,7 +61,6 @@ endif
 # GMS mandatory application packages
 GMS_PRODUCT_PACKAGES += \
     Chrome 
-#    AssistantShell \
 #    Drive \
 #    Gmail2 \
 #    Duo \
@@ -71,6 +70,7 @@ GMS_PRODUCT_PACKAGES += \
 #    Velvet \
 #    Videos \
 #    YouTube \
+#    AssistantShell \
 
 # add calc and other cam app
 GMS_PRODUCT_PACKAGES += \
@@ -117,4 +117,4 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.setupwizard.rotation_locked=true \
     setupwizard.theme=glif_v3_light \
     ro.opa.eligible_device=true \
-    ro.com.google.gmsversion=10_202009
+    ro.com.google.gmsversion=10_202012

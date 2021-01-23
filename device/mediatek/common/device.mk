@@ -933,12 +933,6 @@ $(call inherit-product-if-exists, vendor/google/gms.mk)
 endif
 endif
 
-ifdef BUILD_GMS_nik-kst
-ifeq ($(strip $(BUILD_GMS_nik-kst)), yes)
-$(call inherit-product-if-exists, vendor/google/gms.mk)
-endif
-endif
-
 # prebuilt interface
 $(call inherit-product-if-exists, vendor/mediatek/common/device-vendor.mk)
 
