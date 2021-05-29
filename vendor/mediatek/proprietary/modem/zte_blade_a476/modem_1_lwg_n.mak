@@ -8,7 +8,7 @@
 #  any reproduction,modification, use or disclosure of MediaTek Software, and
 #  information contained herein, in whole or in part, shall be strictly prohibited.
 #
-#  MediaTek Inc.(C)2016.All rights reserved.
+#  MediaTek Inc.(C)2020.All rights reserved.
 #
 #  BY OPENING THIS FILE, RECEIVER HEREBY UNEQUIVOCALLY ACKNOWLEDGES AND
 #  AGREES THAT THE SOFTWARE/FIRMWARE AND ITS DOCUMENTATIONS ("MEDIATEK 
@@ -33,7 +33,7 @@
 #
 # *************************************************************************
 
-# Generated at 2021-03-04 17:46:47
+# Generated at 2021-05-25 11:47:51
 
 # ------------------------------ Modem specification
 MODEM_SPEC = MTK_MODEM_LWG
@@ -367,7 +367,7 @@ UMTS_RF_MODULE = MT6735_UMTS_FDD_MT6169_CUSTOM
   #   Non-switchable
 
 # ------------------------------ Verno information
-VERNO = MD.LWTG.MP.V340
+VERNO = MD.LWTG.MP.V352.3
 BUILD = BUILD_NO
 BRANCH = LR9.W1444.MD.LWTG.MP
 # ------------------------------ System configurations
@@ -416,7 +416,7 @@ PROJECT_MAKEFILE_EXT = BIRD_Q0MP1_K37MV1_BSP(LWG_DSDS_COTSX)_EXT
 #  any reproduction,modification, use or disclosure of MediaTek Software, and
 #  information contained herein, in whole or in part, shall be strictly prohibited.
 #
-#  MediaTek Inc.(C)2016.All rights reserved.
+#  MediaTek Inc.(C)2020.All rights reserved.
 #
 #  BY OPENING THIS FILE, RECEIVER HEREBY UNEQUIVOCALLY ACKNOWLEDGES AND
 #  AGREES THAT THE SOFTWARE/FIRMWARE AND ITS DOCUMENTATIONS ("MEDIATEK 
@@ -441,7 +441,7 @@ PROJECT_MAKEFILE_EXT = BIRD_Q0MP1_K37MV1_BSP(LWG_DSDS_COTSX)_EXT
 #
 # *************************************************************************
 
-# Generated at 2021-03-04 17:46:47
+# Generated at 2021-05-25 11:47:51
 
 CHK_ENV_FLAG = TRUE
   # Description:
@@ -489,6 +489,15 @@ SECURE_CUSTOM_NAME = MTK
   #   JRD: .
   #   MTK: Customer name for MTK
   #   NONE: No customer name specified, non secure load only
+  # Switch-ability:
+  #   Switchable
+
+USB_MSD_SUPPORT = FALSE
+  # Description:
+  #   Used to enable USB Mass Storage device.
+  # Option Values:
+  #   FALSE: USB Mass Storage module will not be built.
+  #   TRUE: USB Mass Storage module will be built.
   # Switch-ability:
   #   Switchable
 
@@ -2521,8 +2530,6 @@ OPTR_SPEC_MODEM = NONE
   # Switch-ability:
   #   Non-switchable
 
-ORIGINAL_VERNO = MOLY.LR9.W1444.MD.LWTG.MP.V340
-
 OS_TICK_PERIOD_IN_US = 5000
   # Description:
   #   Set the OS tick period in micro second
@@ -3216,15 +3223,6 @@ USB_MBIM_SUPPORT = FALSE
   # Option Values:
   #   FALSE: Disable USB MBIM device
   #   TRUE: Enable USB MBIM device
-  # Switch-ability:
-  #   Non-switchable
-
-USB_MSD_SUPPORT = FALSE
-  # Description:
-  #   Used to enable USB Mass Storage device.
-  # Option Values:
-  #   FALSE: USB Mass Storage module will not be built.
-  #   TRUE: USB Mass Storage module will be built.
   # Switch-ability:
   #   Non-switchable
 
